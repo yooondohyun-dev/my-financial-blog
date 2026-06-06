@@ -1,0 +1,55 @@
+/* 5060 타겟 맞춤형 고급 타이포그래피 설정 */
+
+.post-body {
+    color: #333333;
+    line-height: 1.8; /* 눈이 편안한 넓은 줄 간격 */
+    font-size: 18px;  /* 시원시원한 기본 글자 크기 */
+    word-break: keep-all; /* 단어가 잘리지 않게 설정 */
+}
+
+/* 대제목 (h1) */
+.post-body h1 {
+    font-size: 28px;
+    color: #2c3e50; /* 고급스러운 다크 네이비 */
+    font-weight: 800;
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #e2e8f0; /* 아래 밑줄 */
+}
+
+/* 소제목 (h2) */
+.post-body h2 {
+    font-size: 22px;
+    color: #1f2937;
+    font-weight: 700;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    padding-left: 12px;
+    border-left: 5px solid #8ba888; /* 차분한 그린색 세로줄 포인트 */
+}
+
+/* 일반 본문 (p) */
+.post-body p {
+    margin-bottom: 24px;
+}
+
+/* 중요 내용 강조 (strong) - 노란색 형광펜 효과 */
+.post-body strong {
+    color: #111111;
+    font-weight: bold;
+    background: linear-gradient(to top, #fef08a 40%, transparent 40%);
+}
+
+/* 리스트 항목 (ul, li) */
+.post-body ul {
+    list-style-type: disc;
+    margin-left: 24px;
+    margin-bottom: 24px;
+    background-color: #f9f9f9;
+    padding: 20px 20px 20px 40px;
+    border-radius: 8px;
+}
+
+.post-body li {
+    margin-bottom: 12px;
+}
