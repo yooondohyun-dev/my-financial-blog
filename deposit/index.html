@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="골든타임 라운지 - 제2의 월급 만들기 카테고리. 매월 또박또박 꽂히는 안정적인 현금흐름 세팅을 위한 실전 재테크 가이드를 큰 글씨로 전해드립니다.">
+  <meta name="description" content="골든타임 라운지 - 제2의 월급 만들기 카테고리. 미국 배당주 포트폴리오, 4% 고금리 파킹통장 가이드, 주택연금 팩트체크까지 큰 글씨로 알기 쉽게 전해드립니다.">
   <title>제2의 월급 만들기 | 골든타임 라운지</title>
   
   <!-- Tailwind CSS CDN -->
@@ -28,12 +28,12 @@
           },
           colors: {
             brand: {
-              beige: '#FDFBF7',
-              cream: '#F7F3EB',
-              green: '#2A5C43',
-              gold: '#C59B68',
-              charcoal: '#2C3330',
-              accent: '#E6ECE8',
+              beige: '#FAF6F0',
+              cream: '#F2ECE2',
+              green: '#254E36',
+              gold: '#C39462',
+              charcoal: '#2D312E',
+              accent: '#EBE5DC',
             }
           }
         }
@@ -47,57 +47,65 @@
     }
     body {
       font-family: 'Pretendard', sans-serif;
-      background-color: #FDFBF7;
-      color: #2C3330;
+      background-color: #FAF6F0;
+      color: #2D312E;
       line-height: 1.8;
       -webkit-font-smoothing: antialiased;
     }
-    .section-title::after {
+    .editorial-line {
+      position: relative;
+    }
+    .editorial-line::after {
       content: '';
       display: block;
-      width: 48px;
-      height: 3px;
-      background-color: #C59B68;
-      margin-top: 12px;
-      border-radius: 2px;
+      width: 60px;
+      height: 1px;
+      background-color: #C39462;
+      margin: 1.5rem auto 0 auto;
+    }
+    @media (min-width: 1024px) {
+      .editorial-line::after {
+        margin: 1.5rem 0 0 0;
+      }
     }
   </style>
 </head>
 <body class="min-h-screen flex flex-col antialiased selection:bg-brand-gold selection:text-white">
 
-  <!-- TOP DECORATION BAND -->
-  <div class="h-1.5 bg-brand-green w-full"></div>
+  <!-- TOP DECORATION LINE -->
+  <div class="h-1 bg-brand-green w-full"></div>
 
   <!-- HEADER & GNB -->
-  <header class="sticky top-0 z-50 bg-brand-beige/95 backdrop-blur-md border-b border-brand-cream/50 transition-all duration-300">
+  <header class="sticky top-0 z-50 bg-brand-beige/95 backdrop-blur-md border-b border-brand-cream transition-all duration-300">
     <div class="max-w-7xl mx-auto px-6 lg:px-8">
       <div class="flex items-center justify-between h-20 md:h-24">
         
         <!-- LOGO -->
-        <a href="../index.html" class="flex items-center space-x-2.5 focus:outline-none group">
-          <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-brand-green text-brand-gold font-serif text-xl font-bold border border-brand-gold/30 group-hover:scale-105 transition-transform duration-300">골</span>
+        <a href="/index.html" class="flex items-center space-x-2 focus:outline-none group">
+          <span class="inline-flex items-center justify-center w-9 h-9 rounded-full bg-brand-green text-brand-gold font-serif text-lg font-bold">골</span>
           <span class="font-serif text-2xl md:text-3xl font-bold tracking-tight text-brand-green">골든타임 <span class="text-brand-gold">라운지</span></span>
         </a>
 
         <!-- DESKTOP NAV -->
         <nav class="hidden md:flex space-x-8 lg:space-x-12">
-          <a href="#" class="relative text-lg lg:text-xl font-bold text-brand-green py-2 group focus:outline-none">
+          <!-- ACTIVE MENU 1 -->
+          <a href="/deposit/index.html" class="relative text-lg lg:text-xl font-bold text-brand-green py-2 group focus:outline-none">
             제2의 월급 만들기
             <span class="absolute bottom-0 left-0 w-full h-0.5 bg-brand-green"></span>
           </a>
-          <a href="../tax/" class="relative text-lg lg:text-xl font-semibold text-brand-charcoal hover:text-brand-green transition-colors duration-200 py-2 group focus:outline-none">
+          <a href="/tax/index.html" class="relative text-lg lg:text-xl font-semibold text-brand-charcoal hover:text-brand-green transition-colors duration-200 py-2 group focus:outline-none">
             내 돈 지키는 절세
             <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-brand-green transition-all duration-300 group-hover:w-full"></span>
           </a>
-          <a href="../health/" class="relative text-lg lg:text-xl font-semibold text-brand-charcoal hover:text-brand-green transition-colors duration-200 py-2 group focus:outline-none">
+          <a href="/health/index.html" class="relative text-lg lg:text-xl font-semibold text-brand-charcoal hover:text-brand-green transition-colors duration-200 py-2 group focus:outline-none">
             5060 재취업 & 건강
             <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-brand-green transition-all duration-300 group-hover:w-full"></span>
           </a>
         </nav>
 
-        <!-- DESKTOP RIGHT (SEARCH/CTA) -->
-        <div class="hidden md:flex items-center space-x-4">
-          <button onclick="toggleNewsletterModal()" class="px-5 py-2.5 rounded-full border border-brand-green/30 bg-brand-green text-brand-beige font-semibold text-base hover:bg-brand-green/90 transition-colors duration-200 focus:outline-none shadow-sm">
+        <!-- DESKTOP RIGHT BUTTON -->
+        <div class="hidden md:flex items-center">
+          <button onclick="toggleNewsletterModal()" class="px-5 py-2.5 rounded-full border border-brand-green text-brand-green font-semibold text-base hover:bg-brand-green hover:text-brand-beige transition-all duration-300 focus:outline-none shadow-sm">
             <i class="fa-regular fa-envelope mr-1.5"></i> 무료 소식 받기
           </button>
         </div>
@@ -116,15 +124,15 @@
     </div>
 
     <!-- MOBILE DRAWER PANEL -->
-    <div id="mobile-drawer" class="hidden md:hidden bg-brand-beige border-t border-brand-cream/80 shadow-inner px-6 py-6 transition-all duration-300 ease-in-out">
-      <nav class="flex flex-col space-y-5">
-        <a href="#" class="text-xl font-bold text-brand-green border-b border-brand-cream/50 pb-3 block">
+    <div id="mobile-drawer" class="hidden md:hidden bg-brand-beige border-t border-brand-cream shadow-inner px-6 py-8 transition-all duration-300 ease-in-out">
+      <nav class="flex flex-col space-y-6">
+        <a href="/deposit/index.html" class="text-xl font-bold text-brand-green border-b border-brand-cream/80 pb-3 block">
           <i class="fa-solid fa-coins mr-3 text-brand-gold"></i>제2의 월급 만들기
         </a>
-        <a href="../tax/" class="text-xl font-bold text-brand-charcoal hover:text-brand-green border-b border-brand-cream/50 pb-3 block">
+        <a href="/tax/index.html" class="text-xl font-bold text-brand-charcoal hover:text-brand-green border-b border-brand-cream/80 pb-3 block">
           <i class="fa-solid fa-calculator mr-3 text-brand-gold"></i>내 돈 지키는 절세
         </a>
-        <a href="../health/" class="text-xl font-bold text-brand-charcoal hover:text-brand-green border-b border-brand-cream/50 pb-3 block">
+        <a href="/health/index.html" class="text-xl font-bold text-brand-charcoal hover:text-brand-green border-b border-brand-cream/80 pb-3 block">
           <i class="fa-solid fa-heart-pulse mr-3 text-brand-gold"></i>5060 재취업 & 건강
         </a>
         <button onclick="toggleNewsletterModal(); toggleMobileMenu();" class="w-full mt-4 bg-brand-green text-brand-beige py-4 rounded-xl font-semibold text-lg hover:bg-brand-green/90 transition-colors shadow-md">
@@ -136,13 +144,13 @@
 
   <main class="flex-grow">
     
-    <!-- BREADCRUMBS & CATEGORY HEADER -->
-    <section class="bg-gradient-to-b from-brand-beige to-brand-cream py-10 md:py-16 border-b border-brand-cream/50">
+    <!-- BREADCRUMBS & CATEGORY TITLE AREA (NO IMAGES, EDITORIAL) -->
+    <section class="bg-gradient-to-b from-brand-beige to-brand-cream py-10 md:py-16 border-b border-brand-cream">
       <div class="max-w-7xl mx-auto px-6 lg:px-8">
         
         <!-- Breadcrumb navigation -->
         <nav class="flex items-center space-x-2 text-base text-brand-charcoal/60 mb-4" aria-label="Breadcrumb">
-          <a href="../index.html" class="hover:text-brand-green transition-colors"><i class="fa-solid fa-house mr-1"></i> 홈</a>
+          <a href="/index.html" class="hover:text-brand-green transition-colors"><i class="fa-solid fa-house mr-1"></i> 홈</a>
           <span class="text-brand-charcoal/30"><i class="fa-solid fa-chevron-right text-xs"></i></span>
           <span class="text-brand-charcoal font-semibold">제2의 월급 만들기</span>
         </nav>
@@ -150,171 +158,153 @@
         <!-- Title and description -->
         <div class="space-y-4 max-w-3xl">
           <span class="inline-flex items-center px-3.5 py-1 rounded-full bg-brand-green/10 text-brand-green text-sm font-semibold border border-brand-green/20">
-            <i class="fa-solid fa-coins mr-1.5 text-brand-gold"></i> 재테크 & 은퇴자금
+            <i class="fa-solid fa-coins mr-1.5 text-brand-gold"></i> 현금흐름 & 재테크
           </span>
           <h1 class="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-brand-charcoal">
             제2의 월급 만들기
           </h1>
           <p class="text-lg md:text-xl text-brand-charcoal/80 leading-relaxed font-normal">
-            은퇴 이후 매월 또박또박 꽂히는 안정적인 현금흐름 세팅법을 다룹니다. 부동산 주택연금부터 안전한 배당 주식, 고금리 파킹통장 활용 전략까지 쉽고 정확하게 전해드립니다.
+            매월 또박또박 꽂히는 안정적인 현금흐름으로 여유로운 은퇴 생활을 설계합니다. 노후 생활의 든든한 버팀목이 되어 줄 배당 소득 포트폴리오 세팅, 손실 위험 없는 유용한 금리 혜택 파킹통장, 그리고 주택 자산을 종신 연금으로 바꾸는 현실적인 노하우를 소개합니다.
           </p>
         </div>
 
       </div>
     </section>
 
-    <!-- MAIN CONTENT AREA (POSTS LIST & SIDEBAR) -->
+    <!-- CONTENT LIST SECTION (8 Cols Content + 4 Cols Sidebar) -->
     <section class="py-12 md:py-20 max-w-7xl mx-auto px-6 lg:px-8">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
         
-        <!-- POSTS LIST (8 Columns) -->
-        <div class="lg:col-span-8 space-y-8 md:space-y-12">
+        <!-- POST LIST AREA (8 Columns) -->
+        <div class="lg:col-span-8 space-y-8 md:space-y-10">
           
           <!-- POST 1 -->
-          <article class="bg-white rounded-3xl border border-brand-cream/80 overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 grid grid-cols-1 md:grid-cols-12 focus-within:ring-2 focus-within:ring-brand-green group">
-            <!-- Thumbnail Image -->
-            <div class="md:col-span-5 relative overflow-hidden h-56 md:h-auto min-h-[240px]">
-              <a href="post1.html" class="block w-full h-full">
-                <img src="../images/dividend.png" alt="미국 배당주와 따뜻한 차" class="w-full h-full object-cover transform duration-500 group-hover:scale-105">
-              </a>
-              <span class="absolute top-4 left-4 bg-brand-green text-brand-beige text-xs font-bold px-3 py-1 rounded-full shadow-sm">
-                미국 배당주
-              </span>
-            </div>
-            <!-- Content -->
-            <div class="md:col-span-7 p-6 md:p-8 flex flex-col justify-between space-y-4">
-              <div class="space-y-3">
-                <div class="flex items-center space-x-2 text-xs md:text-sm text-brand-charcoal/50">
-                  <span class="font-semibold text-brand-gold"><i class="fa-solid fa-calendar mr-1"></i> 2026.06.06</span>
-                  <span>•</span>
-                  <span>조회 23.4k</span>
-                </div>
-                <h2 class="font-serif text-xl sm:text-2xl font-bold text-brand-charcoal leading-snug group-hover:text-brand-green transition-colors duration-200">
-                  <a href="post1.html" class="focus:outline-none">
-                    국민연금 70만 원으론 부족할 때, 매월 50만 원 나오는 미국 배당주 세팅법
-                  </a>
-                </h2>
-                <p class="text-base sm:text-lg text-brand-charcoal/70 line-clamp-3 leading-relaxed">
-                  국민연금만으로는 부족한 품위 유지비, 매월 안정적으로 입금되는 미국 배당주를 통해 든든한 파이프라인을 구축해 봅니다. 50대 은퇴 초보를 위해 쉬운 예시와 계좌 개설법을 상세히 담았습니다.
-                </p>
+          <article class="bg-white rounded-2xl border border-brand-cream/80 p-8 md:p-10 shadow-[0_8px_30px_rgb(0,0,0,0.012)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.035)] transition-all duration-300 flex flex-col justify-between focus-within:ring-2 focus-within:ring-brand-green group border-l-4 border-l-brand-green">
+            <div class="space-y-4">
+              <!-- Meta Tag & Date -->
+              <div class="flex items-center justify-between text-xs md:text-sm text-brand-charcoal/50">
+                <span class="text-brand-green font-bold tracking-wider font-serif">[미국배당주]</span>
+                <span class="font-semibold text-brand-gold"><i class="fa-solid fa-calendar mr-1"></i> 2026.06.06</span>
               </div>
-              <div class="pt-4 border-t border-brand-cream/60 flex items-center justify-between">
-                <span class="text-sm text-brand-charcoal/40 font-medium">필진: 라운지 파트너</span>
-                <a href="post1.html" class="inline-flex items-center text-base sm:text-lg font-bold text-brand-green group-hover:text-brand-gold transition-colors focus:outline-none">
-                  자세히 보기 <i class="fa-solid fa-circle-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
+              
+              <!-- Title -->
+              <h2 class="font-serif text-xl sm:text-2xl md:text-3xl font-bold text-brand-charcoal leading-snug group-hover:text-brand-green transition-colors duration-200">
+                <a href="post1.html" class="focus:outline-none">
+                  국민연금 70만 원으론 부족할 때, 매월 50만 원 나오는 미국 배당주 세팅법
                 </a>
-              </div>
+              </h2>
+              
+              <!-- Summary -->
+              <p class="text-base sm:text-lg text-brand-charcoal/70 leading-relaxed">
+                SCHD와 JEPI를 활용하여 당장 다음 달부터 달러로 월급 받는 현실적인 투자 전략과 필요 자금 분석. 주가 변동에 일희일비하지 않고 대기업의 탄탄한 성장에 기반해 정기적인 배당 소득을 확보하는 은퇴 맞춤형 금융 투자 모델입니다.
+              </p>
+            </div>
+            
+            <!-- Read More & Footer Info -->
+            <div class="pt-6 border-t border-brand-cream/70 mt-6 flex items-center justify-between">
+              <span class="text-xs sm:text-sm text-brand-charcoal/40 font-medium">작성자: 금융전문 파트너 | 조회 23.4k</span>
+              <a href="post1.html" class="inline-flex items-center text-base sm:text-lg font-bold text-brand-green group-hover:text-brand-gold transition-colors focus:outline-none">
+                자세히 보기 <i class="fa-solid fa-arrow-right-long ml-2 group-hover:translate-x-1 transition-transform"></i>
+              </a>
             </div>
           </article>
 
           <!-- POST 2 -->
-          <article class="bg-white rounded-3xl border border-brand-cream/80 overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 grid grid-cols-1 md:grid-cols-12 focus-within:ring-2 focus-within:ring-brand-green group">
-            <!-- Thumbnail Image -->
-            <div class="md:col-span-5 relative overflow-hidden h-56 md:h-auto min-h-[240px]">
-              <a href="post2.html" class="block w-full h-full">
-                <img src="../images/parking_bank.png" alt="투명 저금통에 담긴 골드 코인" class="w-full h-full object-cover transform duration-500 group-hover:scale-105">
-              </a>
-              <span class="absolute top-4 left-4 bg-brand-green text-brand-beige text-xs font-bold px-3 py-1 rounded-full shadow-sm">
-                파킹통장
-              </span>
-            </div>
-            <!-- Content -->
-            <div class="md:col-span-7 p-6 md:p-8 flex flex-col justify-between space-y-4">
-              <div class="space-y-3">
-                <div class="flex items-center space-x-2 text-xs md:text-sm text-brand-charcoal/50">
-                  <span class="font-semibold text-brand-gold"><i class="fa-solid fa-calendar mr-1"></i> 2026.06.05</span>
-                  <span>•</span>
-                  <span>조회 15.1k</span>
-                </div>
-                <h2 class="font-serif text-xl sm:text-2xl font-bold text-brand-charcoal leading-snug group-hover:text-brand-green transition-colors duration-200">
-                  <a href="post2.html" class="focus:outline-none">
-                    50대 주부도 쉽게 따라 하는 이율 4% 파킹통장 활용법
-                  </a>
-                </h2>
-                <p class="text-base sm:text-lg text-brand-charcoal/70 line-clamp-3 leading-relaxed">
-                  하루만 입금해 두어도 연 4% 수준의 높은 이자가 복리로 쌓이는 마법 같은 파킹통장 활용 가이드입니다. 시중 제1금융권부터 안전한 제2금융권 상품 비교와 스마트폰 비대면 개설 과정을 1부터 10까지 캡처로 보여 드립니다.
-                </p>
+          <article class="bg-white rounded-2xl border border-brand-cream/80 p-8 md:p-10 shadow-[0_8px_30px_rgb(0,0,0,0.012)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.035)] transition-all duration-300 flex flex-col justify-between focus-within:ring-2 focus-within:ring-brand-green group border-l-4 border-l-brand-gold">
+            <div class="space-y-4">
+              <!-- Meta Tag & Date -->
+              <div class="flex items-center justify-between text-xs md:text-sm text-brand-charcoal/50">
+                <span class="text-brand-gold font-bold tracking-wider font-serif">[재테크 기초]</span>
+                <span class="font-semibold text-brand-gold"><i class="fa-solid fa-calendar mr-1"></i> 2026.06.05</span>
               </div>
-              <div class="pt-4 border-t border-brand-cream/60 flex items-center justify-between">
-                <span class="text-sm text-brand-charcoal/40 font-medium">필진: 자산관리팀</span>
-                <a href="post2.html" class="inline-flex items-center text-base sm:text-lg font-bold text-brand-green group-hover:text-brand-gold transition-colors focus:outline-none">
-                  자세히 보기 <i class="fa-solid fa-circle-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
+              
+              <!-- Title -->
+              <h2 class="font-serif text-xl sm:text-2xl md:text-3xl font-bold text-brand-charcoal leading-snug group-hover:text-brand-green transition-colors duration-200">
+                <a href="post2.html" class="focus:outline-none">
+                  50대 주부도 쉽게 따라 하는 이율 4% 파킹통장 활용법
                 </a>
-              </div>
+              </h2>
+              
+              <!-- Summary -->
+              <p class="text-base sm:text-lg text-brand-charcoal/70 leading-relaxed">
+                비상금과 예비비를 하루만 맡겨도 이자가 쌓이는 파킹통장 쪼개기와 시중은행별 금리 비교 팩트체크. 주거래 은행 정기예금에만 묶어두었던 유휴자금을 수시 입출금이 가능하면서도 높은 이자를 주는 실용 금융 상품을 비교 분석합니다.
+              </p>
+            </div>
+            
+            <!-- Read More & Footer Info -->
+            <div class="pt-6 border-t border-brand-cream/70 mt-6 flex items-center justify-between">
+              <span class="text-xs sm:text-sm text-brand-charcoal/40 font-medium">작성자: 자산배분 분석팀 | 조회 15.1k</span>
+              <a href="post2.html" class="inline-flex items-center text-base sm:text-lg font-bold text-brand-green group-hover:text-brand-gold transition-colors focus:outline-none">
+                자세히 보기 <i class="fa-solid fa-arrow-right-long ml-2 group-hover:translate-x-1 transition-transform"></i>
+              </a>
             </div>
           </article>
 
           <!-- POST 3 -->
-          <article class="bg-white rounded-3xl border border-brand-cream/80 overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 grid grid-cols-1 md:grid-cols-12 focus-within:ring-2 focus-within:ring-brand-green group">
-            <!-- Thumbnail Image -->
-            <div class="md:col-span-5 relative overflow-hidden h-56 md:h-auto min-h-[240px]">
-              <a href="post3.html" class="block w-full h-full">
-                <img src="../images/housing_pension.png" alt="아름다운 정원이 있는 모던 주택" class="w-full h-full object-cover transform duration-500 group-hover:scale-105">
-              </a>
-              <span class="absolute top-4 left-4 bg-brand-green text-brand-beige text-xs font-bold px-3 py-1 rounded-full shadow-sm">
-                주택연금
-              </span>
-            </div>
-            <!-- Content -->
-            <div class="md:col-span-7 p-6 md:p-8 flex flex-col justify-between space-y-4">
-              <div class="space-y-3">
-                <div class="flex items-center space-x-2 text-xs md:text-sm text-brand-charcoal/50">
-                  <span class="font-semibold text-brand-gold"><i class="fa-solid fa-calendar mr-1"></i> 2026.06.03</span>
-                  <span>•</span>
-                  <span>조회 29.8k</span>
-                </div>
-                <h2 class="font-serif text-xl sm:text-2xl font-bold text-brand-charcoal leading-snug group-hover:text-brand-green transition-colors duration-200">
-                  <a href="post3.html" class="focus:outline-none">
-                    내 집으로 평생 연금 받기: 주택연금 가입, 지금이 적기일까?
-                  </a>
-                </h2>
-                <p class="text-base sm:text-lg text-brand-charcoal/70 line-clamp-3 leading-relaxed">
-                  평생 내 집에서 살면서 돌아가실 때까지 매월 국가보증 연금을 지급받는 제도. 집값이 내리거나 오를 때 가입 시점에 따른 유불리와 자녀 동의 요건, 상속 시 최종 정산 기준 등 꼼꼼한 세부사항을 담백하게 해석했습니다.
-                </p>
+          <article class="bg-white rounded-2xl border border-brand-cream/80 p-8 md:p-10 shadow-[0_8px_30px_rgb(0,0,0,0.012)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.035)] transition-all duration-300 flex flex-col justify-between focus-within:ring-2 focus-within:ring-brand-green group border-l-4 border-l-brand-green">
+            <div class="space-y-4">
+              <!-- Meta Tag & Date -->
+              <div class="flex items-center justify-between text-xs md:text-sm text-brand-charcoal/50">
+                <span class="text-brand-green font-bold tracking-wider font-serif">[주택연금]</span>
+                <span class="font-semibold text-brand-gold"><i class="fa-solid fa-calendar mr-1"></i> 2026.06.03</span>
               </div>
-              <div class="pt-4 border-t border-brand-cream/60 flex items-center justify-between">
-                <span class="text-sm text-brand-charcoal/40 font-medium">필진: 부동산 컨설턴트</span>
-                <a href="post3.html" class="inline-flex items-center text-base sm:text-lg font-bold text-brand-green group-hover:text-brand-gold transition-colors focus:outline-none">
-                  자세히 보기 <i class="fa-solid fa-circle-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
+              
+              <!-- Title -->
+              <h2 class="font-serif text-xl sm:text-2xl md:text-3xl font-bold text-brand-charcoal leading-snug group-hover:text-brand-green transition-colors duration-200">
+                <a href="post3.html" class="focus:outline-none">
+                  내 집으로 평생 연금 받기: 주택연금 가입, 지금이 적기일까?
                 </a>
-              </div>
+              </h2>
+              
+              <!-- Summary -->
+              <p class="text-base sm:text-lg text-brand-charcoal/70 leading-relaxed">
+                2026년 최신 가입 조건과 부부 사망 시 상속 문제까지, 내 집을 활용한 가장 안전한 노후 연금 가이드. 거주 안정을 확보함과 동시에 자산 가치를 평생에 걸쳐 현금흐름으로 환원하는 한국주택금융공사의 핵심 정책 요강을 안내합니다.
+              </p>
+            </div>
+            
+            <!-- Read More & Footer Info -->
+            <div class="pt-6 border-t border-brand-cream/70 mt-6 flex items-center justify-between">
+              <span class="text-xs sm:text-sm text-brand-charcoal/40 font-medium">작성자: 은퇴소득 컨설턴트 | 조회 29.8k</span>
+              <a href="post3.html" class="inline-flex items-center text-base sm:text-lg font-bold text-brand-green group-hover:text-brand-gold transition-colors focus:outline-none">
+                자세히 보기 <i class="fa-solid fa-arrow-right-long ml-2 group-hover:translate-x-1 transition-transform"></i>
+              </a>
             </div>
           </article>
 
           <!-- PAGINATION -->
           <nav class="flex items-center justify-center space-x-2 pt-8" aria-label="페이지 선택">
-            <a href="#" class="w-12 h-12 rounded-xl border border-brand-cream/80 bg-white text-brand-charcoal hover:bg-brand-cream/30 flex items-center justify-center text-lg font-semibold focus:outline-none transition-colors"><i class="fa-solid fa-chevron-left"></i></a>
+            <a href="#" class="w-12 h-12 rounded-xl border border-brand-cream bg-white text-brand-charcoal hover:bg-brand-cream/40 flex items-center justify-center text-lg font-semibold focus:outline-none transition-colors"><i class="fa-solid fa-chevron-left"></i></a>
             <a href="#" class="w-12 h-12 rounded-xl bg-brand-green text-brand-beige flex items-center justify-center text-lg font-bold shadow-sm" aria-current="page">1</a>
-            <a href="#" class="w-12 h-12 rounded-xl border border-brand-cream/80 bg-white text-brand-charcoal hover:bg-brand-cream/30 flex items-center justify-center text-lg font-semibold focus:outline-none transition-colors">2</a>
-            <a href="#" class="w-12 h-12 rounded-xl border border-brand-cream/80 bg-white text-brand-charcoal hover:bg-brand-cream/30 flex items-center justify-center text-lg font-semibold focus:outline-none transition-colors">3</a>
-            <a href="#" class="w-12 h-12 rounded-xl border border-brand-cream/80 bg-white text-brand-charcoal hover:bg-brand-cream/30 flex items-center justify-center text-lg font-semibold focus:outline-none transition-colors"><i class="fa-solid fa-chevron-right"></i></a>
+            <a href="#" class="w-12 h-12 rounded-xl border border-brand-cream bg-white text-brand-charcoal hover:bg-brand-cream/40 flex items-center justify-center text-lg font-semibold focus:outline-none transition-colors">2</a>
+            <a href="#" class="w-12 h-12 rounded-xl border border-brand-cream bg-white text-brand-charcoal hover:bg-brand-cream/40 flex items-center justify-center text-lg font-semibold focus:outline-none transition-colors">3</a>
+            <a href="#" class="w-12 h-12 rounded-xl border border-brand-cream bg-white text-brand-charcoal hover:bg-brand-cream/40 flex items-center justify-center text-lg font-semibold focus:outline-none transition-colors"><i class="fa-solid fa-chevron-right"></i></a>
           </nav>
 
         </div>
 
-        <!-- SIDEBAR (4 Columns) -->
+        <!-- SIDEBAR AREA (4 Columns) -->
         <aside class="lg:col-span-4 space-y-8">
           
-          <!-- SIDEBAR WIDGET 1: CATEGORY LIST -->
-          <div class="bg-white rounded-3xl p-6 md:p-8 border border-brand-cream/80 shadow-sm space-y-6">
+          <!-- SIDEBAR WIDGET 1: CATEGORIES -->
+          <div class="bg-white rounded-2xl p-6 md:p-8 border border-brand-cream/80 shadow-sm space-y-6">
             <h3 class="font-serif text-xl font-bold text-brand-charcoal border-b border-brand-cream pb-4 flex items-center">
               <i class="fa-solid fa-list-ul mr-2.5 text-brand-gold"></i> 카테고리
             </h3>
             <ul class="space-y-3.5">
               <li>
-                <a href="#" class="flex items-center justify-between text-base sm:text-lg font-bold text-brand-green bg-brand-accent/30 py-3 px-4 rounded-xl">
+                <a href="/deposit/index.html" class="flex items-center justify-between text-base sm:text-lg font-bold text-brand-green bg-brand-accent/30 py-3 px-4 rounded-xl">
                   <span><i class="fa-solid fa-circle-play mr-2 text-brand-green/70"></i>제2의 월급 만들기</span>
                   <span class="text-sm bg-brand-green text-brand-beige px-2.5 py-0.5 rounded-full">3</span>
                 </a>
               </li>
               <li>
-                <a href="../tax/" class="flex items-center justify-between text-base sm:text-lg font-semibold text-brand-charcoal hover:text-brand-green py-3 px-4 rounded-xl hover:bg-brand-cream/20 transition-all">
+                <a href="/tax/index.html" class="flex items-center justify-between text-base sm:text-lg font-semibold text-brand-charcoal hover:text-brand-green py-3 px-4 rounded-xl hover:bg-brand-cream/20 transition-all">
                   <span><i class="fa-regular fa-circle mr-2 text-brand-charcoal/30"></i>내 돈 지키는 절세</span>
                   <span class="text-sm bg-brand-cream text-brand-charcoal/60 px-2.5 py-0.5 rounded-full">12</span>
                 </a>
               </li>
               <li>
-                <a href="../health/" class="flex items-center justify-between text-base sm:text-lg font-semibold text-brand-charcoal hover:text-brand-green py-3 px-4 rounded-xl hover:bg-brand-cream/20 transition-all">
+                <a href="/health/index.html" class="flex items-center justify-between text-base sm:text-lg font-semibold text-brand-charcoal hover:text-brand-green py-3 px-4 rounded-xl hover:bg-brand-cream/20 transition-all">
                   <span><i class="fa-regular fa-circle mr-2 text-brand-charcoal/30"></i>5060 재취업 & 건강</span>
                   <span class="text-sm bg-brand-cream text-brand-charcoal/60 px-2.5 py-0.5 rounded-full">18</span>
                 </a>
@@ -322,59 +312,41 @@
             </ul>
           </div>
 
-          <!-- SIDEBAR WIDGET 2: POPULAR POSTS -->
-          <div class="bg-white rounded-3xl p-6 md:p-8 border border-brand-cream/80 shadow-sm space-y-6">
+          <!-- SIDEBAR WIDGET 2: FINANCE GLOSSARY (SPECIAL CONTENT FOR SENIORS) -->
+          <div class="bg-white rounded-2xl p-6 md:p-8 border border-brand-cream/80 shadow-sm space-y-6">
             <h3 class="font-serif text-xl font-bold text-brand-charcoal border-b border-brand-cream pb-4 flex items-center">
-              <i class="fa-solid fa-fire-flame-simple mr-2.5 text-brand-gold"></i> 실시간 인기 가이드
+              <i class="fa-solid fa-circle-info mr-2.5 text-brand-gold"></i> 재테크 & 연금 필수 상식
             </h3>
-            <div class="space-y-4">
-              <!-- Item 1 -->
-              <a href="post1.html" class="flex items-start space-x-3.5 group">
-                <span class="font-serif text-2xl font-bold text-brand-gold shrink-0">01</span>
-                <div class="space-y-1">
-                  <h4 class="text-base font-semibold text-brand-charcoal group-hover:text-brand-green transition-colors leading-snug line-clamp-2">
-                    국민연금 70만 원으론 부족할 때, 매월 50만 원 나오는 미국 배당주 세팅법
-                  </h4>
-                  <p class="text-xs text-brand-charcoal/40">조회수 23.4k</p>
-                </div>
-              </a>
-              <!-- Item 2 -->
-              <a href="post3.html" class="flex items-start space-x-3.5 group">
-                <span class="font-serif text-2xl font-bold text-brand-gold shrink-0">02</span>
-                <div class="space-y-1">
-                  <h4 class="text-base font-semibold text-brand-charcoal group-hover:text-brand-green transition-colors leading-snug line-clamp-2">
-                    내 집으로 평생 연금 받기: 주택연금 가입, 지금이 적기일까?
-                  </h4>
-                  <p class="text-xs text-brand-charcoal/40">조회수 29.8k</p>
-                </div>
-              </a>
-              <!-- Item 3 -->
-              <a href="../health/" class="flex items-start space-x-3.5 group">
-                <span class="font-serif text-2xl font-bold text-brand-gold/60 shrink-0">03</span>
-                <div class="space-y-1">
-                  <h4 class="text-base font-semibold text-brand-charcoal group-hover:text-brand-green transition-colors leading-snug line-clamp-2">
-                    50대 여성이 따놓으면 평생 써먹는 현실적인 국가자격증 베스트 3
-                  </h4>
-                  <p class="text-xs text-brand-charcoal/40">조회수 34.2k</p>
-                </div>
-              </a>
-            </div>
+            <dl class="space-y-4 text-base">
+              <div>
+                <dt class="font-bold text-brand-green">배당수익률 vs 배당성장률</dt>
+                <dd class="text-brand-charcoal/70 text-sm mt-1 leading-relaxed">
+                  배당수익률은 주가 대비 현재 배당금의 비율(현재의 인컴)을 나타내며, 배당성장률은 기업이 매년 배당을 얼마나 늘려왔는지(미래의 현금흐름 증가율)를 보여줍니다. 은퇴 시기에는 두 요소의 조화가 중요합니다.
+                </dd>
+              </div>
+              <div class="border-t border-brand-cream/60 pt-4">
+                <dt class="font-bold text-brand-green">주택연금 종신지급방식</dt>
+                <dd class="text-brand-charcoal/70 text-sm mt-1 leading-relaxed">
+                  가입자 부부 사망 시까지 평생 동안 매월 동일한 연금액 수령을 국가가 보장하는 가장 보편적인 수급 형태입니다. 추후 부부 사망 시 집값보다 연금 수령 총액이 적으면 남은 금액은 자녀에게 상속됩니다.
+                </dd>
+              </div>
+            </dl>
           </div>
 
-          <!-- SIDEBAR WIDGET 3: CTA CONSULTATION -->
-          <div class="bg-brand-green text-brand-beige rounded-3xl p-6 md:p-8 border border-brand-gold/20 shadow-md space-y-5 relative overflow-hidden">
+          <!-- SIDEBAR WIDGET 3: 1:1 FINANCE CONSULTATION BANNER -->
+          <div class="bg-brand-green text-brand-beige rounded-2xl p-6 md:p-8 border border-brand-gold/20 shadow-md space-y-5 relative overflow-hidden">
             <div class="absolute -bottom-10 -right-10 w-32 h-32 bg-brand-gold/10 rounded-full blur-2xl"></div>
             <span class="inline-block px-3 py-1 rounded-full bg-brand-gold/25 border border-brand-gold/30 text-xs font-semibold tracking-wide">
-              무료 1:1 상담 서비스
+              무료 포트폴리오 진단
             </span>
             <h3 class="font-serif text-xl sm:text-2xl font-bold leading-snug">
-              어려운 연금, 연이자 높은 예금 찾기... 답답하셨나요?
+              어려운 미국 배당주 세팅과 계좌 개설, 궁금하셨나요?
             </h3>
             <p class="text-sm md:text-base text-brand-beige/80 leading-relaxed">
-              성함과 궁금한 점만 간략히 적어주시면, 라운지 전문 금융 파트너가 상세한 분석 답변을 메일로 보내 드립니다.
+              은퇴 후 매월 원하는 수준의 현금흐름 목표금액을 적어 문의 주시면, 구체적인 투자 세팅 가이드를 무료로 구성하여 보내드립니다.
             </p>
             <button onclick="toggleQnAModal()" class="w-full bg-brand-gold hover:bg-brand-gold/95 active:scale-95 text-brand-charcoal font-bold py-3.5 rounded-xl transition-all shadow-md text-base sm:text-lg">
-              <i class="fa-solid fa-pencil mr-1.5"></i> 익명 간편 질문하기
+              <i class="fa-solid fa-pencil mr-1.5"></i> 무료 금융 상담 접수하기
             </button>
           </div>
 
@@ -410,10 +382,10 @@
               <a href="#" class="text-brand-gold transition-colors block py-0.5"><i class="fa-solid fa-chevron-right text-brand-gold/40 text-xs mr-2"></i>제2의 월급 만들기</a>
             </li>
             <li>
-              <a href="../tax/" class="hover:text-brand-gold transition-colors block py-0.5"><i class="fa-solid fa-chevron-right text-brand-gold/40 text-xs mr-2"></i>내 돈 지키는 절세</a>
+              <a href="/tax/index.html" class="hover:text-brand-gold transition-colors block py-0.5"><i class="fa-solid fa-chevron-right text-brand-gold/40 text-xs mr-2"></i>내 돈 지키는 절세</a>
             </li>
             <li>
-              <a href="../health/" class="hover:text-brand-gold transition-colors block py-0.5"><i class="fa-solid fa-chevron-right text-brand-gold/40 text-xs mr-2"></i>5060 재취업 & 건강 정보</a>
+              <a href="/health/index.html" class="hover:text-brand-gold transition-colors block py-0.5"><i class="fa-solid fa-chevron-right text-brand-gold/40 text-xs mr-2"></i>5060 재취업 & 건강 정보</a>
             </li>
           </ul>
         </div>
@@ -425,11 +397,6 @@
             이메일: support@goldentimelounge.co.kr<br>
             운영시간: 평일 오전 10시 ~ 오후 5시
           </p>
-          <div class="flex space-x-4 pt-1.5">
-            <a href="#" class="w-9 h-9 rounded-full bg-brand-green/20 flex items-center justify-center hover:bg-brand-green/50 text-brand-gold transition-colors" aria-label="카카오톡 채널"><i class="fa-solid fa-comment-nodes"></i></a>
-            <a href="#" class="w-9 h-9 rounded-full bg-brand-green/20 flex items-center justify-center hover:bg-brand-green/50 text-brand-gold transition-colors" aria-label="유튜브"><i class="fa-brands fa-youtube"></i></a>
-            <a href="#" class="w-9 h-9 rounded-full bg-brand-green/20 flex items-center justify-center hover:bg-brand-green/50 text-brand-gold transition-colors" aria-label="블로그"><i class="fa-solid fa-rss"></i></a>
-          </div>
         </div>
       </div>
 
@@ -442,9 +409,9 @@
       </div>
 
       <!-- Footer Bottom -->
-      <div class="pt-8 border-t border-brand-beige/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs sm:text-sm text-brand-beige/45">
+      <div class="pt-8 border-t border-brand-beige/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs sm:text-sm text-brand-beige/45 text-center sm:text-left">
         <p>© 2026 골든타임 라운지. All rights reserved.</p>
-        <div class="flex space-x-6">
+        <div class="flex space-x-6 justify-center sm:justify-start">
           <a href="#" class="hover:underline">이용약관</a>
           <a href="#" class="hover:underline font-semibold text-brand-gold">개인정보 처리방침</a>
           <a href="#" class="hover:underline">고객지원</a>
@@ -490,7 +457,7 @@
     </div>
   </div>
 
-  <!-- INTERACTIVE COMPONENT 2: QNA MODAL (ADVICE BOX) -->
+  <!-- INTERACTIVE COMPONENT 2: QNA MODAL -->
   <div id="qna-modal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm">
     <div class="bg-brand-beige max-w-lg w-full rounded-3xl overflow-hidden shadow-2xl border border-brand-gold/30 flex flex-col transform transition-transform duration-300 scale-95 opacity-0" id="qna-modal-content">
       <div class="bg-brand-green p-6 text-center text-brand-beige relative">
@@ -500,8 +467,8 @@
         <div class="w-14 h-14 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-3 text-brand-gold text-2xl border border-brand-gold/25">
           <i class="fa-solid fa-clipboard-question"></i>
         </div>
-        <h3 class="font-serif text-2xl font-bold">1:1 익명 맞춤 고민 상담</h3>
-        <p class="text-sm text-brand-beige/80 mt-1">전문 필진이 정확하고 따뜻한 가이드라인을 이메일로 전해드립니다</p>
+        <h3 class="font-serif text-2xl font-bold">1:1 익명 맞춤 재테크 상담</h3>
+        <p class="text-sm text-brand-beige/80 mt-1">전문 필진 및 파트너 자문단이 안전하고 성실한 답변을 메일로 발송합니다</p>
       </div>
       
       <div class="p-6 md:p-8 space-y-4 bg-brand-beige max-h-[70vh] overflow-y-auto">
@@ -520,7 +487,7 @@
         </div>
         <div class="space-y-3">
           <label class="block text-base font-bold text-brand-charcoal" for="qnaContent">고민 내용 적기</label>
-          <textarea id="qnaContent" rows="4" placeholder="고민 중이신 자산 이전 계획, 관심 있는 일자리, 혹은 다뤄주었으면 하는 블로그 소재 등을 자세하게 적어주세요. 꼼꼼히 알아보고 답변해 드리겠습니다." class="w-full px-4 py-3 rounded-xl border border-brand-green/20 bg-white text-base focus:outline-none focus:ring-2 focus:ring-brand-green shadow-sm"></textarea>
+          <textarea id="qnaContent" rows="4" placeholder="달성하고자 하는 은퇴 현금흐름 규모, 주택연금 가입 시기와 관련된 주택 시세 문의, 파킹통장 쪼개기 고민사항 등을 적어주세요." class="w-full px-4 py-3 rounded-xl border border-brand-green/20 bg-white text-base focus:outline-none focus:ring-2 focus:ring-brand-green shadow-sm"></textarea>
         </div>
         <button onclick="submitQnARequest()" class="w-full mt-4 bg-brand-green text-brand-beige py-4 rounded-xl font-bold text-lg md:text-xl hover:bg-brand-green/90 transition-all active:scale-95 shadow-md">
           상담 신청 접수하기
@@ -536,7 +503,7 @@
     </div>
     <div class="space-y-1">
       <h4 class="font-bold text-base md:text-lg text-white font-serif">신청 완료!</h4>
-      <p id="toast-message" class="text-sm md:text-base text-brand-beige/85">
+      <p id="toast-message" class="text-sm md:text-base text-brand-beige/85 font-sans">
         성공적으로 등록되었습니다.
       </p>
     </div>
