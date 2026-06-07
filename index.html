@@ -28,12 +28,12 @@
           },
           colors: {
             brand: {
-              beige: '#FAF6F0',     // 부드럽고 따뜻한 밀크 베이지
-              cream: '#F2ECE2',     // 연한 웜그레이/크림
-              green: '#254E36',     // 시크하고 깊은 포레스트 그린
-              gold: '#C39462',      // 우아한 포인트 구리/골드
-              charcoal: '#2D312E',  // 가독성이 높은 메인 다크 그레이
-              accent: '#EBE5DC',    // 깊이감을 주는 구분선 및 테두리용
+              beige: '#FDFBF7',     // 따뜻한 크림 베이지 배경
+              cream: '#F5EFEB',     // 연한 웜그레이 서브 배경
+              green: '#1A3A3A',     // 깊은 포레스트 그린 (메인 테마)
+              gold: '#C5A059',      // 우아한 포인트 골드
+              charcoal: '#2B2D2C',  // 시력 보호용 다크 챠콜 텍스트
+              accent: '#EAE2D8',    // 매거진 느낌의 구분선 및 테두리용
             }
           }
         }
@@ -47,21 +47,20 @@
     }
     body {
       font-family: 'Pretendard', sans-serif;
-      background-color: #FAF6F0;
-      color: #2D312E;
-      line-height: 1.8;
+      background-color: #FDFBF7;
+      color: #2B2D2C;
+      line-height: 1.85;
       -webkit-font-smoothing: antialiased;
     }
-    /* 고급 에디토리얼 스타일의 세련된 선 장식 */
     .editorial-line {
       position: relative;
     }
     .editorial-line::after {
       content: '';
       display: block;
-      width: 60px;
+      width: 70px;
       height: 1px;
-      background-color: #C39462;
+      background-color: #C5A059;
       margin: 1.5rem auto 0 auto;
     }
     @media (min-width: 1024px) {
@@ -73,7 +72,7 @@
 </head>
 <body class="min-h-screen flex flex-col antialiased selection:bg-brand-gold selection:text-white">
 
-  <!-- TOP DECORATION LINE (시크한 포레스트 그린 선) -->
+  <!-- TOP DECORATION LINE (우아한 포레스트 그린 라인) -->
   <div class="h-1 bg-brand-green w-full"></div>
 
   <!-- HEADER & GNB -->
@@ -82,7 +81,7 @@
       <div class="flex items-center justify-between h-20 md:h-24">
         
         <!-- LOGO -->
-        <a href="./index.html" class="flex items-center space-x-2 focus:outline-none group">
+        <a href="/index.html" class="flex items-center space-x-2 focus:outline-none group">
           <span class="inline-flex items-center justify-center w-9 h-9 rounded-full bg-brand-green text-brand-gold font-serif text-lg font-bold">골</span>
           <span class="font-serif text-2xl md:text-3xl font-bold tracking-tight text-brand-green">골든타임 <span class="text-brand-gold">라운지</span></span>
         </a>
@@ -144,39 +143,36 @@
 
   <main class="flex-grow">
     
-    <!-- TYPOGRAPHIC HERO SECTION (NO IMAGES, RICH WHITE-SPACE) -->
-    <section class="relative py-16 md:py-28 lg:py-36 overflow-hidden">
-      <!-- Muted organic shapes made of pure CSS gradients to create premium lighting without images -->
+    <!-- TYPOGRAPHIC HERO SECTION (NO IMAGES, MAGNER STYLE) -->
+    <section class="relative py-20 md:py-32 lg:py-40 overflow-hidden">
+      <!-- Minimalist color blur backgrounds -->
       <div class="absolute -top-32 -left-32 w-96 h-96 rounded-full bg-brand-gold/5 blur-3xl pointer-events-none"></div>
       <div class="absolute bottom-0 right-10 w-[600px] h-[600px] rounded-full bg-brand-green/5 blur-3xl pointer-events-none"></div>
 
-      <div class="max-w-5xl mx-auto px-6 text-center space-y-8 md:space-y-12 relative">
+      <div class="max-w-5xl mx-auto px-6 text-center space-y-8 md:space-y-10 relative">
         
-        <!-- Elegant Serif Tagline -->
+        <!-- Subtle Serif Tagline -->
         <span class="inline-flex items-center px-4 py-1.5 rounded-full border border-brand-green/30 text-brand-green text-sm md:text-base font-semibold tracking-wider bg-brand-cream/40">
-          <span class="w-1.5 h-1.5 rounded-full bg-brand-gold mr-2"></span> 품격 있는 5060 여성을 위한 공간
+          <span class="w-1.5 h-1.5 rounded-full bg-brand-gold mr-2"></span> 품격 있는 5060 여성을 위한 블로그 공간
         </span>
         
-        <!-- Title Box with Premium Double Border Design (Editorial Style) -->
-        <div class="border-t border-b border-brand-accent py-10 md:py-16 px-4 md:px-8 space-y-6 md:space-y-8 bg-brand-cream/10">
+        <!-- Elegant Frame Border -->
+        <div class="border-t border-b border-brand-accent py-12 md:py-20 px-4 md:px-8 space-y-6 md:space-y-8 bg-brand-cream/10">
           <h1 class="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-brand-charcoal leading-tight md:leading-[1.25] tracking-tight editorial-line">
             우아하고 당당한 노후를 위한<br class="hidden sm:inline">
             <span class="text-brand-green">실전 가이드</span>
           </h1>
           <p class="font-sans text-lg md:text-xl lg:text-2xl text-brand-charcoal/80 leading-relaxed max-w-2xl mx-auto font-normal">
             50대 이후, 진짜 내 인생을 위한 재테크와 건강 정보.<br class="hidden sm:inline">
-            복잡하고 피로한 디자인에서 벗어나 오직 가독성 높은 텍스트와 우아한 여백으로 핵심 가치를 전달합니다.
+            화려한 광고와 복잡한 이미지는 걷어내고 오직 깊이 있는 텍스트와 우아한 여백으로 은퇴 생활을 안내합니다.
           </p>
         </div>
 
-        <!-- CTA Action Buttons -->
-        <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
-          <a href="#latest-posts" class="w-full sm:w-auto text-center px-10 py-4.5 bg-brand-green text-brand-beige font-bold text-lg md:text-xl rounded-xl hover:bg-brand-green/95 transition-all shadow-sm focus:outline-none active:scale-95">
-            인기 칼럼 읽어보기 <i class="fa-solid fa-arrow-down ml-2 text-brand-gold"></i>
+        <!-- Action Button -->
+        <div class="pt-4">
+          <a href="#latest-posts" class="inline-block px-12 py-5 bg-brand-green text-brand-beige font-bold text-lg md:text-xl rounded-xl hover:bg-brand-green/95 transition-all shadow-sm focus:outline-none active:scale-95">
+            가이드북 칼럼 읽기 <i class="fa-solid fa-arrow-down ml-2 text-brand-gold"></i>
           </a>
-          <button onclick="toggleQnAModal()" class="w-full sm:w-auto text-center px-10 py-4.5 bg-white text-brand-charcoal border border-brand-accent font-bold text-lg md:text-xl rounded-xl hover:bg-brand-cream/40 transition-colors focus:outline-none">
-            1:1 무료 맞춤 상담 신청
-          </button>
         </div>
 
       </div>
@@ -187,20 +183,20 @@
       
       <!-- Section Title Header -->
       <div class="text-center md:text-left space-y-3 mb-12 md:mb-16">
-        <span class="text-brand-gold font-serif text-lg font-bold tracking-widest uppercase"><i class="fa-solid fa-bookmark mr-1"></i> Editorial Column</span>
-        <h2 class="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-brand-charcoal section-title">최신 포스팅 안내</h2>
+        <span class="text-brand-gold font-serif text-lg font-bold tracking-widest uppercase"><i class="fa-solid fa-bookmark mr-1"></i> Golden Post</span>
+        <h2 class="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-brand-charcoal section-title">이번 주 추천 가이드</h2>
       </div>
 
       <!-- Text-only 3 Cards Grid -->
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-10">
         
-        <!-- CARD 1 -->
-        <article class="bg-white rounded-2xl border border-brand-cream/80 p-8 md:p-10 shadow-[0_8px_30px_rgb(0,0,0,0.015)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.04)] transition-all duration-300 flex flex-col justify-between min-h-[380px] focus-within:ring-2 focus-within:ring-brand-green group">
+        <!-- CARD 1: 미국 배당주 -->
+        <article class="bg-white rounded-2xl border border-brand-cream p-8 md:p-10 shadow-[0_8px_30px_rgb(0,0,0,0.012)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.04)] transition-all duration-300 flex flex-col justify-between min-h-[380px] focus-within:ring-2 focus-within:ring-brand-green group border-t-4 border-t-brand-green">
           <div class="space-y-6">
             <!-- Category Tag & Date -->
             <div class="flex items-center justify-between text-sm">
               <span class="text-brand-green font-bold text-base tracking-wide font-serif">[제2의 월급]</span>
-              <span class="text-brand-charcoal/40 font-medium">2026.06.06</span>
+              <span class="text-brand-charcoal/40 font-medium">2026.06.07</span>
             </div>
             
             <!-- Post Title -->
@@ -212,7 +208,7 @@
             
             <!-- Summary Excerpt -->
             <p class="text-base sm:text-lg text-brand-charcoal/70 leading-relaxed line-clamp-4">
-              SCHD와 JEPI를 활용한 현실적인 은퇴 후 현금흐름 만들기. 어려운 수식이나 매매 공부 없이 매월 또박또박 배당금이 입금되는 안전한 달러 포트폴리오의 기초를 정리해 드립니다.
+              SCHD와 JEPI를 활용하여 당장 다음 달부터 달러로 월급 받는 현실적인 투자 전략과 필요 자금 분석. 주식 공부 없이도 정기적인 달러 배당 수익을 만들 수 있는 비법을 설명합니다.
             </p>
           </div>
           
@@ -225,13 +221,13 @@
           </div>
         </article>
 
-        <!-- CARD 2 -->
-        <article class="bg-white rounded-2xl border border-brand-cream/80 p-8 md:p-10 shadow-[0_8px_30px_rgb(0,0,0,0.015)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.04)] transition-all duration-300 flex flex-col justify-between min-h-[380px] focus-within:ring-2 focus-within:ring-brand-green group">
+        <!-- CARD 2: 절세 증여 -->
+        <article class="bg-white rounded-2xl border border-brand-cream p-8 md:p-10 shadow-[0_8px_30px_rgb(0,0,0,0.012)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.04)] transition-all duration-300 flex flex-col justify-between min-h-[380px] focus-within:ring-2 focus-within:ring-brand-green group border-t-4 border-t-brand-gold">
           <div class="space-y-6">
             <!-- Category Tag & Date -->
             <div class="flex items-center justify-between text-sm">
               <span class="text-brand-gold font-bold text-base tracking-wide font-serif">[절세 & 상속]</span>
-              <span class="text-brand-charcoal/40 font-medium">2026.06.05</span>
+              <span class="text-brand-charcoal/40 font-medium">2026.06.06</span>
             </div>
             
             <!-- Post Title -->
@@ -243,7 +239,7 @@
             
             <!-- Summary Excerpt -->
             <p class="text-base sm:text-lg text-brand-charcoal/70 leading-relaxed line-clamp-4">
-              2026년 최신 세법 기준 혼인/출산 증여공제 완벽 활용법. 부모 마음에 한 푼이라도 합법적으로 더 얹어주고 싶은 자녀 결혼 자금, 세무사 없이도 완벽하게 절약할 수 있는 신고 가이드라인입니다.
+              2026년 최신 세법 기준 혼인/출산 증여공제 통합 한도와 양가 합산 효과 완벽 활용법. 합법의 테두리 안에서 소중한 자산을 안전하고 지혜롭게 물려주는 방법의 지침서입니다.
             </p>
           </div>
           
@@ -256,13 +252,13 @@
           </div>
         </article>
 
-        <!-- CARD 3 -->
-        <article class="bg-white rounded-2xl border border-brand-cream/80 p-8 md:p-10 shadow-[0_8px_30px_rgb(0,0,0,0.015)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.04)] transition-all duration-300 flex flex-col justify-between min-h-[380px] focus-within:ring-2 focus-within:ring-brand-green group">
+        <!-- CARD 3: 국가자격증 -->
+        <article class="bg-white rounded-2xl border border-brand-cream p-8 md:p-10 shadow-[0_8px_30px_rgb(0,0,0,0.012)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.04)] transition-all duration-300 flex flex-col justify-between min-h-[380px] focus-within:ring-2 focus-within:ring-brand-green group border-t-4 border-t-brand-green">
           <div class="space-y-6">
             <!-- Category Tag & Date -->
             <div class="flex items-center justify-between text-sm">
               <span class="text-brand-green/80 font-bold text-base tracking-wide font-serif">[재취업 & 건강]</span>
-              <span class="text-brand-charcoal/40 font-medium">2026.06.03</span>
+              <span class="text-brand-charcoal/40 font-medium">2026.06.05</span>
             </div>
             
             <!-- Post Title -->
@@ -274,7 +270,7 @@
             
             <!-- Summary Excerpt -->
             <p class="text-base sm:text-lg text-brand-charcoal/70 leading-relaxed line-clamp-4">
-              요양보호사부터 맞춤형 화장품 조제관리사까지, 정부 지원금으로 시작하기. 나이 제한 없이 평생 전문적인 자부심과 수익을 안겨다 줄 유망 자격증 3종을 정직하게 추천해 드립니다.
+              요양보호사, 아이돌보미, 맞춤형 화장품 조제관리사 등 내일배움카드로 취득하는 현실적인 일자리 가이드. 50대 은퇴 후에도 당당하게 성취감과 월급을 지키는 요령을 추천합니다.
             </p>
           </div>
           
@@ -291,7 +287,7 @@
     </section>
 
     <!-- NEW INTERACTIVE CONTENT: EDITORIAL VALUE CORNER -->
-    <section class="bg-brand-cream/40 py-16 md:py-24 border-y border-brand-cream/80">
+    <section class="bg-brand-cream/30 py-16 md:py-24 border-y border-brand-cream">
       <div class="max-w-7xl mx-auto px-6 lg:px-8">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           
@@ -299,11 +295,11 @@
           <div class="space-y-6">
             <span class="text-brand-gold font-serif text-base font-bold tracking-widest uppercase block"><i class="fa-solid fa-heart mr-1"></i> Our Philosophy</span>
             <h2 class="font-serif text-3xl sm:text-4xl font-bold text-brand-charcoal leading-tight">
-              복잡하고 복잡한 세상,<br>
-              <span class="text-brand-green">노후 가이드는 심플해야 합니다.</span>
+              가장 중요한 핵심 정보에만<br>
+              <span class="text-brand-green">집중해 편안하게 읽어보세요.</span>
             </h2>
             <p class="text-lg text-brand-charcoal/80 leading-relaxed">
-              우리는 현란한 배너 광고나 현혹적인 이미지를 사용하지 않습니다. 골든타임 라운지는 품격 있는 시니어 여성의 시력과 가독성을 배려하여 오직 잘 읽히는 텍스트와 투명한 정보만을 공유합니다.
+              우리는 어떠한 배너 광고나 사진의 유혹도 사용하지 않습니다. 골든타임 라운지는 오직 중장년층 눈이 편안한 자간, 행간, 대형 텍스트 크기를 바탕으로 안전하고 팩트체크된 지식 가이드만을 정성스레 다룹니다.
             </p>
           </div>
 
@@ -312,15 +308,15 @@
             <div class="flex items-start space-x-4">
               <span class="text-3xl font-serif font-bold text-brand-gold shrink-0">01</span>
               <div>
-                <h4 class="font-serif text-xl font-bold text-brand-charcoal">안전 최우선의 재테크 정보</h4>
-                <p class="text-base text-brand-charcoal/70 mt-1">원금 보장형 금리 상품부터 안정적 대기업 배당주 위주의 보수적 재테크 정보를 전달합니다.</p>
+                <h4 class="font-serif text-xl font-bold text-brand-charcoal">정직한 은퇴 자금 설계</h4>
+                <p class="text-base text-brand-charcoal/70 mt-1">이율이 높은 주택 연금 활용법부터 우량 대기업 중심 배당 성향 분석 가이드를 제시합니다.</p>
               </div>
             </div>
             <div class="flex items-start space-x-4 border-t border-brand-cream/60 pt-6">
               <span class="text-3xl font-serif font-bold text-brand-gold shrink-0">02</span>
               <div>
-                <h4 class="font-serif text-xl font-bold text-brand-charcoal">전문 필진의 팩트 체크</h4>
-                <p class="text-base text-brand-charcoal/70 mt-1">인터넷에 떠도는 뜬소문 대신 최신 세법 개정안과 공식 정부 지원제도를 직접 교차 검증합니다.</p>
+                <h4 class="font-serif text-xl font-bold text-brand-charcoal">세제 혜택 및 법 개정 준수</h4>
+                <p class="text-base text-brand-charcoal/70 mt-1">최신 혼인공제와 양도소득세 세법 개정안을 반영해 자녀에게 지혜롭게 이전하는 솔루션을 연구합니다.</p>
               </div>
             </div>
           </div>
@@ -329,22 +325,26 @@
       </div>
     </section>
 
-    <!-- NEWSLETTER SUBSCRIPTION SECTION -->
-    <section class="py-16 md:py-24 bg-brand-beige">
-      <div class="max-w-3xl mx-auto px-6 text-center space-y-8">
-        <div class="w-16 h-16 rounded-full border border-brand-green/20 bg-brand-cream/30 flex items-center justify-center mx-auto text-brand-green text-3xl">
+    <!-- NEWSLETTER SUBSCRIPTION SECTION (무료 소식 받기 - 눈에 잘 띄도록 우아하게 디자인) -->
+    <section class="py-20 md:py-28 bg-brand-cream/50 relative overflow-hidden">
+      <!-- CSS Decorative Borders to make it look like a high-end invitation card -->
+      <div class="absolute inset-x-6 inset-y-6 md:inset-x-12 md:inset-y-12 border border-brand-gold/30 rounded-3xl pointer-events-none"></div>
+      
+      <div class="max-w-3xl mx-auto px-10 text-center space-y-8 relative">
+        <div class="w-16 h-16 rounded-full border border-brand-gold/45 bg-white flex items-center justify-center mx-auto text-brand-gold text-2xl shadow-sm">
           <i class="fa-regular fa-envelope-open"></i>
         </div>
         <div class="space-y-4">
-          <h2 class="font-serif text-3xl md:text-4xl font-bold text-brand-charcoal">
-            매주 목요일 오전, 골든타임 편지가 배달됩니다
+          <h2 class="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-brand-charcoal">
+            매주 목요일 오전,<br class="inline sm:hidden"> 골든타임 편지가 배달됩니다
           </h2>
-          <p class="text-lg md:text-xl text-brand-charcoal/80 max-w-xl mx-auto">
+          <p class="text-lg md:text-xl text-brand-charcoal/80 max-w-lg mx-auto">
             국민연금 개시전 전략, 자녀 절세 증여, 50대 노후 건강 일자리 정보를 간편하게 메일함으로 받아보세요.
           </p>
         </div>
 
-        <form id="newsletterForm" onsubmit="handleNewsletterSubmit(event)" class="max-w-lg mx-auto flex flex-col sm:flex-row gap-3 pt-4">
+        <!-- Inline Newsletter Form -->
+        <form id="newsletterForm" onsubmit="handleNewsletterSubmit(event)" class="max-w-md mx-auto flex flex-col sm:flex-row gap-3 pt-4">
           <div class="relative flex-grow">
             <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
               <i class="fa-regular fa-user text-brand-charcoal/40 text-lg"></i>
@@ -366,7 +366,7 @@
 
   </main>
 
-  <!-- FOOTER -->
+  <!-- FOOTER (문의 이메일 bestbori06@gmail.com 반영) -->
   <footer class="bg-brand-charcoal text-brand-beige/90 pt-16 pb-8 border-t border-brand-gold/20">
     <div class="max-w-7xl mx-auto px-6 lg:px-8 space-y-12">
       
@@ -399,11 +399,11 @@
           </ul>
         </div>
 
-        <!-- Contact/Notice -->
+        <!-- Contact/Notice (bestbori06@gmail.com 반영) -->
         <div class="md:col-span-3 space-y-4">
           <h4 class="font-serif text-lg font-bold text-brand-gold tracking-wide">라운지 문의</h4>
           <p class="text-base text-brand-beige/65 leading-relaxed">
-            이메일: support@goldentimelounge.co.kr<br>
+            이메일: <a href="mailto:bestbori06@gmail.com" class="hover:text-brand-gold underline decoration-brand-gold/50">bestbori06@gmail.com</a><br>
             운영시간: 평일 오전 10시 ~ 오후 5시
           </p>
         </div>
@@ -466,46 +466,7 @@
     </div>
   </div>
 
-  <!-- INTERACTIVE COMPONENT 2: QNA MODAL -->
-  <div id="qna-modal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm">
-    <div class="bg-brand-beige max-w-lg w-full rounded-3xl overflow-hidden shadow-2xl border border-brand-gold/30 flex flex-col transform transition-transform duration-300 scale-95 opacity-0" id="qna-modal-content">
-      <div class="bg-brand-green p-6 text-center text-brand-beige relative">
-        <button onclick="toggleQnAModal()" class="absolute top-4 right-4 text-brand-beige/80 hover:text-white text-2xl focus:outline-none" aria-label="닫기">
-          <i class="fa-solid fa-xmark"></i>
-        </button>
-        <div class="w-14 h-14 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-3 text-brand-gold text-2xl border border-brand-gold/25">
-          <i class="fa-solid fa-clipboard-question"></i>
-        </div>
-        <h3 class="font-serif text-2xl font-bold">1:1 익명 맞춤 고민 상담</h3>
-        <p class="text-sm text-brand-beige/80 mt-1">전문 필진이 정확하고 따뜻한 가이드라인을 이메일로 전해드립니다</p>
-      </div>
-      
-      <div class="p-6 md:p-8 space-y-4 bg-brand-beige max-h-[70vh] overflow-y-auto">
-        <div class="space-y-3">
-          <label class="block text-base font-bold text-brand-charcoal" for="qnaCategory">질문 분야 선택</label>
-          <select id="qnaCategory" class="w-full px-4 py-3 rounded-xl border border-brand-green/20 bg-white text-lg focus:outline-none focus:ring-2 focus:ring-brand-green shadow-sm">
-            <option value="deposit">재테크 및 제2의 월급 (연금, 투자 등)</option>
-            <option value="tax">증여, 상속 및 절세 방법</option>
-            <option value="health">건강 관리 및 5060 재취업/자격증</option>
-            <option value="other">기타 인생 2막 라이프 고민</option>
-          </select>
-        </div>
-        <div class="space-y-3">
-          <label class="block text-base font-bold text-brand-charcoal" for="qnaEmail">답변 받으실 이메일</label>
-          <input type="email" id="qnaEmail" placeholder="username@gmail.com" class="w-full px-4 py-3 rounded-xl border border-brand-green/20 bg-white text-lg focus:outline-none focus:ring-2 focus:ring-brand-green shadow-sm">
-        </div>
-        <div class="space-y-3">
-          <label class="block text-base font-bold text-brand-charcoal" for="qnaContent">고민 내용 적기</label>
-          <textarea id="qnaContent" rows="4" placeholder="고민 중이신 자산 이전 계획, 관심 있는 일자리, 혹은 다뤄주었으면 하는 블로그 소재 등을 자세하게 적어주세요. 꼼꼼히 알아보고 답변해 드리겠습니다." class="w-full px-4 py-3 rounded-xl border border-brand-green/20 bg-white text-base focus:outline-none focus:ring-2 focus:ring-brand-green shadow-sm"></textarea>
-        </div>
-        <button onclick="submitQnARequest()" class="w-full mt-4 bg-brand-green text-brand-beige py-4 rounded-xl font-bold text-lg md:text-xl hover:bg-brand-green/90 transition-all active:scale-95 shadow-md">
-          상담 신청 접수하기
-        </button>
-      </div>
-    </div>
-  </div>
-
-  <!-- INTERACTIVE COMPONENT 3: SUCCESS ALERT TOAST -->
+  <!-- SUCCESS ALERT TOAST -->
   <div id="success-toast" class="fixed bottom-8 right-8 z-50 hidden bg-[#1E3B2D] border border-brand-gold text-brand-beige px-6 py-5 rounded-2xl shadow-2xl max-w-sm flex items-start space-x-3.5 animate-bounce">
     <div class="w-8 h-8 rounded-full bg-brand-gold text-white flex items-center justify-center shrink-0">
       <i class="fa-solid fa-check"></i>
@@ -559,28 +520,7 @@
       }
     }
 
-    // 3. Q&A Modal Control
-    function toggleQnAModal() {
-      const modal = document.getElementById('qna-modal');
-      const content = document.getElementById('qna-modal-content');
-      const isHidden = modal.classList.contains('hidden');
-
-      if (isHidden) {
-        modal.classList.remove('hidden');
-        setTimeout(() => {
-          content.classList.remove('scale-95', 'opacity-0');
-          content.classList.add('scale-100', 'opacity-100');
-        }, 10);
-      } else {
-        content.classList.remove('scale-100', 'opacity-100');
-        content.classList.add('scale-95', 'opacity-0');
-        setTimeout(() => {
-          modal.classList.add('hidden');
-        }, 300);
-      }
-    }
-
-    // 4. Success Toast Notification Trigger
+    // 3. Success Toast Notification Trigger
     function showToast(message) {
       const toast = document.getElementById('success-toast');
       const text = document.getElementById('toast-message');
@@ -592,7 +532,7 @@
       }, 5000);
     }
 
-    // 5. Submit Newsletter Form (Main Page)
+    // 4. Submit Newsletter Form (Main Page)
     function handleNewsletterSubmit(e) {
       e.preventDefault();
       const name = document.getElementById('subName').value;
@@ -605,7 +545,7 @@
       }
     }
 
-    // 6. Submit Newsletter Modal Form
+    // 5. Submit Newsletter Modal Form
     function submitModalNewsletter() {
       const name = document.getElementById('modalName').value;
       const email = document.getElementById('modalEmail').value;
@@ -625,22 +565,6 @@
       document.getElementById('modalEmail').value = '';
       toggleNewsletterModal();
       showToast(`${name}님, 골든타임 소식지 구독이 완료되었습니다.`);
-    }
-
-    // 7. Submit Q&A Advice Form
-    function submitQnARequest() {
-      const email = document.getElementById('qnaEmail').value;
-      const content = document.getElementById('qnaContent').value;
-      
-      if(!email || !content) {
-        alert("답변 받으실 이메일과 고민 내용을 모두 작성해 주세요.");
-        return;
-      }
-
-      document.getElementById('qnaEmail').value = '';
-      document.getElementById('qnaContent').value = '';
-      toggleQnAModal();
-      showToast(`성공적으로 접수되었습니다. 24시간 내에 기재하신 이메일(${email})로 답변을 발송해 드리겠습니다.`);
     }
   </script>
 </body>
